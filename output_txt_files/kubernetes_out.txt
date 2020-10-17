@@ -1,1 +1,14 @@
-<paste log output from Kubernetes-mediated prediction, here>
+$ ./run_kubernetes.sh
+pod/sklearn created
+NAME      READY   STATUS    RESTARTS   AGE
+sklearn   1/1     Running   0          60s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+
+$ ./make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
